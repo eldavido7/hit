@@ -245,7 +245,7 @@ export default function AboutPage() {
                     </p>
 
                     {/* Cards Container */}
-                    <div className="relative md:max-w-[1000px] mx-auto ml-12">
+                    <div className="relative md:max-w-[1000px] mx-auto ml-8">
                         {/* Vision Card - Orange (Left) */}
                         <div className="relative md:absolute left-0 top-0 transform -translate-y-12 -rotate-6 z-30 mb-8 md:mb-0">
                             <div className="bg-[#bf5925] text-white p-8 rounded-3xl w-80 h-96 shadow-2xl">
