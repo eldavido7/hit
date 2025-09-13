@@ -10,7 +10,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="relative flex items-center justify-between px-12 py-4 bg-white">
+    <header className="relative flex items-center justify-between px-12 py-4 z-20">
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center gap-2">
           <Image

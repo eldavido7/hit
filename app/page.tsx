@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { BiRightArrowAlt } from "react-icons/bi";
+
 export default function HomePage() {
   const storyNotifications = [
     {
@@ -87,18 +88,34 @@ export default function HomePage() {
       {/* Header */}
       <Header />
 
+      {/* Background Frame Image with Blur Effects */}
+      <div className="absolute top-0 left-0 w-full h-[150vh] z-0">
+        <Image
+          src="/gridlines.png"
+          alt="Background frame"
+          fill
+          className="object-cover"
+        />
+        {/* Blur overlay for entire background */}
+        <div className="absolute inset-0 bg-gradient-radial from-white/60 via-white/30 to-transparent"></div>
+        {/* Circular blur behind header/text area */}
+        <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 w-[1200px] h-[600px] bg-white/50 rounded-full blur-[120px]"></div>
+        {/* Bottom circular blur */}
+        <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-[1400px] h-[400px] bg-white/60 rounded-full blur-[100px]"></div>
+      </div>
+
       {/* Main Content */}
       <main className="relative px-6 py-16">
         <div className="relative max-w-[1536px] mx-auto">
           <div className="absolute w-[587px] h-[740px] top-[142px] left-[427px] bg-app-primary rounded-[293.3px/369.87px] rotate-[-52.53deg] blur-[374.42px] opacity-[0.16]" />
-
+          {/* 
           <Image
             className="absolute w-full h-full top-0 left-0 object-cover"
             alt="Frame"
             src="/frame-1597882450.svg"
             fill
             priority
-          />
+          /> */}
 
           <div className="absolute inset-0 pointer-events-none">
             {storyNotifications.map((notification, index) => (
@@ -489,7 +506,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Side - 2x2 Photo Grid */}
-            <div className="grid grid-cols-2 gap-4 h-[520px] relative">
+            <div className="grid grid-cols-2 gap-4 h-[520px] md:max-w-[80%] relative">
               {/* Top Row */}
               <div className="rounded-[50px] overflow-hidden">
                 <Image
@@ -500,7 +517,7 @@ export default function HomePage() {
                   className="w-full h-full object-cover bg-cover bg-center"
                 />
               </div>
-              <div className="rounded-[50px] overflow-hidden transform -rotate-[30deg] translate-y-4 scale-60">
+              <div className="rounded-[50px] overflow-hidden transform md:-rotate-[25deg] md:translate-y-4 md:scale-70">
                 <Image
                   src="/woman-golden-outfit.jpg"
                   alt="Woman in golden bronze colored clothing"
