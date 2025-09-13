@@ -84,12 +84,12 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Header */}
       <Header />
 
       {/* Background Frame Image with Blur Effects */}
-      <div className="absolute top-0 left-0 w-full h-[150vh] z-0">
+      <div className="absolute top-0 left-0 w-full h-[150vh] z-0 overflow-hidden">
         <Image
           src="/gridlines.png"
           alt="Background frame"
@@ -99,10 +99,11 @@ export default function HomePage() {
         {/* Blur overlay for entire background */}
         <div className="absolute inset-0 bg-gradient-radial from-white/60 via-white/30 to-transparent"></div>
         {/* Circular blur behind header/text area */}
-        <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 w-[1200px] h-[600px] bg-white/50 rounded-full blur-[120px]"></div>
+        <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[1200px] h-[600px] bg-white/50 rounded-full blur-[120px]"></div>
         {/* Bottom circular blur */}
-        <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-[1400px] h-[400px] bg-white/60 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[1400px] h-[400px] bg-white/60 rounded-full blur-[100px]"></div>
       </div>
+
 
       {/* Main Content */}
       <main className="relative px-6 py-16">
@@ -506,7 +507,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Side - 2x2 Photo Grid */}
-            <div className="grid grid-cols-2 gap-4 h-[520px] md:max-w-[80%] relative">
+            <div className="grid grid-cols-2 gap-4 h-[520px] md:max-w-[80%] md:ml-10 ml-0 md:gap-8 relative">
               {/* Top Row */}
               <div className="rounded-[50px] overflow-hidden">
                 <Image
@@ -517,7 +518,7 @@ export default function HomePage() {
                   className="w-full h-full object-cover bg-cover bg-center"
                 />
               </div>
-              <div className="rounded-[50px] overflow-hidden transform md:-rotate-[25deg] md:translate-y-4 md:scale-70">
+              <div className="rounded-[50px] overflow-hidden transform md:-rotate-[25deg] md:translate-y-4 md:scale-80">
                 <Image
                   src="/woman-golden-outfit.jpg"
                   alt="Woman in golden bronze colored clothing"
@@ -553,8 +554,8 @@ export default function HomePage() {
 
       {/* HIT TALES text section */}
       <section className="bg-[#f5f5f5] px-1 overflow-hidden">
-        <div className="w-full mx-auto text-center relative">
-          <h2 className="text-[8rem] md:text-[16rem] lg:text-[18rem] font-cormorant text-[#353336] opacity-20 tracking-widest leading-none select-none pointer-events-none">
+        <div className="w-full mx-auto text-center relative overflow-hidden">
+          <h2 className="text-[5rem] md:text-[16rem] lg:text-[18rem] font-cormorant text-[#353336] opacity-20 tracking-widest leading-none select-none pointer-events-none overflow-hidden">
             HIT Tales
           </h2>
         </div>
