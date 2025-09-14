@@ -109,15 +109,6 @@ export default function HomePage() {
       <main className="relative px-6 py-16">
         <div className="relative max-w-[1536px] mx-auto">
           <div className="absolute w-[587px] h-[740px] top-[142px] left-[427px] bg-app-primary rounded-[293.3px/369.87px] rotate-[-52.53deg] blur-[374.42px] opacity-[0.16]" />
-          {/* 
-          <Image
-            className="absolute w-full h-full top-0 left-0 object-cover"
-            alt="Frame"
-            src="/frame-1597882450.svg"
-            fill
-            priority
-          /> */}
-
           <div className="absolute inset-0 pointer-events-none">
             {storyNotifications.map((notification, index) => (
               <div

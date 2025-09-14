@@ -30,16 +30,16 @@ export default function Header() {
         <Link href="/about" className="text-[#353336] hover:text-[#bf5925] transition-colors">
           About
         </Link>
-        <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors">
+        <Link href="/blog" className="text-[#353336] hover:text-[#bf5925] transition-colors">
           Blog
         </Link>
-        <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors">
+        <Link href="/stories" className="text-[#353336] hover:text-[#bf5925] transition-colors">
           Stories
         </Link>
         <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors">
           Store
         </Link>
-        <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors">
+        <Link href="/community" className="text-[#353336] hover:text-[#bf5925] transition-colors">
           Community
         </Link>
         <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors">
@@ -73,16 +73,16 @@ export default function Header() {
             <Link href="/about" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">
               About
             </Link>
-            <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">
+            <Link href="/blog" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">
               Blog
             </Link>
-            <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">
+            <Link href="/stories" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">
               Stories
             </Link>
             <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">
               Store
             </Link>
-            <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">
+            <Link href="/community" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">
               Community
             </Link>
             <Link href="#" className="text-[#353336] hover:text-[#bf5925] transition-colors py-2">

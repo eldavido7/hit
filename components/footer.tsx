@@ -104,12 +104,12 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Link href="/stories" className="text-gray-300 hover:text-white transition-colors">
                     Stories
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Link href="/community" className="text-gray-300 hover:text-white transition-colors">
                     Community
                   </Link>
                 </li>
@@ -130,7 +130,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
                     Blog
                   </Link>
                 </li>
@@ -140,7 +140,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Link href="/stories" className="text-gray-300 hover:text-white transition-colors">
                     Store
                   </Link>
                 </li>
