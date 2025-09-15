@@ -114,7 +114,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Link href="/events" className="text-gray-300 hover:text-white transition-colors">
                     Events
                   </Link>
                 </li>
@@ -125,7 +125,7 @@ export default function Footer() {
               <h5 className="text-gray-400 font-medium mb-4">Learn</h5>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
                     About
                   </Link>
                 </li>
@@ -135,7 +135,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                  <Link href="/faq" className="text-gray-300 hover:text-white transition-colors">
                     FAQ
                   </Link>
                 </li>
@@ -207,9 +207,7 @@ export default function Footer() {
             <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-              Cookies
-            </Link>
+
           </div>
         </div>
       </div>

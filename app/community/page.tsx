@@ -3,15 +3,29 @@
 import Header from '@/components/header'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { events } from '@/lib/mockData'
 import { QRCodeComponent } from '@/components/qrcode'
 import { Briefcase } from 'lucide-react'
 import { BiBullseye } from 'react-icons/bi'
 import Footer from '@/components/footer'
+import Link from 'next/link'
+import { EventModal } from "@/components/event-modal"
 
 export default function Community() {
     const [translateX, setTranslateX] = useState(0)
+    const [selectedEvent, setSelectedEvent] = useState<any>(null)
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const handleEventClick = (event: any) => {
+        setSelectedEvent(event)
+        setIsModalOpen(true)
+    }
+
+    const closeModal = () => {
+        setIsModalOpen(false)
+        setSelectedEvent(null)
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -50,34 +64,30 @@ export default function Community() {
                 <div className="absolute bottom-[10%] left-1/2 transform -translate-x-1/2 w-[90vw] max-w-[1400px] h-[400px] bg-white/60 rounded-full blur-[100px]"></div>
             </div>
 
+            <div className="relative px-6 max-w-[1536px] mx-auto">
+                <div className="absolute w-[587px] h-[740px] top-[142px] left-[427px] rounded-[293.3px/369.87px] rotate-[-52.53deg] blur-[374.42px] opacity-[0.16]" />
 
-            {/* Main Content */}
-            <main className="relative px-6">
-                <div className="relative max-w-[1536px] mx-auto">
-                    <div className="absolute w-[587px] h-[740px] top-[142px] left-[427px] bg-app-primary rounded-[293.3px/369.87px] rotate-[-52.53deg] blur-[374.42px] opacity-[0.16]" />
+                {/* Hero Section */}
+                <div className="text-center pt-16 relative z-10">
+                    <div className="absolute w-[587px] h-[740px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#bf5925] rounded-[293.3px/369.87px] rotate-[-52.53deg] blur-[374.42px] opacity-[0.16] -z-10" />
 
-                    {/* Hero Section */}
-                    <div className="text-center pt-16 relative z-10">
-                        <div className="absolute w-[587px] h-[740px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#bf5925] rounded-[293.3px/369.87px] rotate-[-52.53deg] blur-[374.42px] opacity-[0.16] -z-10" />
-
-                        <h1 className="text-5xl md:text-6xl font-cormorant text-[#353336] mb-6 leading-tight">
-                            A Global Community of <br /> <span className="text-[#bf5925] italic">Immigrant Women</span> and Allies
-                        </h1>
-                        <p className="text-lg text-[#353336] mb-8 max-w-2xl mx-auto leading-relaxed">
-                            Connect, collaborate, and grow together in a space built on trust, truth, and shared humanity.
-                        </p>
-                        <div className="flex items-center justify-center gap-4">
-                            <Button
-                                variant="outline"
-                                className="border-[#bf5925] text-[#bf5925] hover:bg-[#bf5925] hover:text-white rounded-full px-8 py-3 bg-white"
-                            >
-                                Collaborate
-                            </Button>
-                            <Button className="bg-[#bf5925] hover:bg-[#bf5925]/90 text-white rounded-full px-8 py-3">Donate</Button>
-                        </div>
+                    <h1 className="text-5xl md:text-6xl font-cormorant text-[#353336] mb-6 leading-tight">
+                        A Global Community of <br /> <span className="text-[#bf5925] italic">Immigrant Women</span> and Allies
+                    </h1>
+                    <p className="text-lg text-[#353336] mb-8 max-w-2xl mx-auto leading-relaxed">
+                        Connect, collaborate, and grow together in a space built on trust, truth, and shared humanity.
+                    </p>
+                    <div className="flex items-center justify-center gap-4">
+                        <Button
+                            variant="outline"
+                            className="border-[#bf5925] text-[#bf5925] hover:bg-[#bf5925] hover:text-white rounded-full px-8 py-3 bg-white"
+                        >
+                            Collaborate
+                        </Button>
+                        <Button className="bg-[#bf5925] hover:bg-[#bf5925]/90 text-white rounded-full px-8 py-3">Donate</Button>
                     </div>
                 </div>
-            </main>
+            </div>
 
             {/* Portfolio Grid */}
             <div className="relative w-full h-[550px] overflow-hidden">
@@ -232,7 +242,7 @@ export default function Community() {
                                                     </p>
                                                     <p
                                                         className="text-[#bf5925] text-md font-semibold cursor-pointer hover:underline"
-                                                        onClick={() => window.open(event.meetingLink, '_blank')}
+                                                        onClick={() => handleEventClick(event)}
                                                     >
                                                         Join Us
                                                     </p>
@@ -296,14 +306,15 @@ export default function Community() {
                                                         <Button
                                                             size="sm"
                                                             className="bg-[#bf5925] hover:bg-[#bf5925]/90 text-white"
-                                                            onClick={() => window.open(event.meetingLink, '_blank')}
+                                                            onClick={() => handleEventClick(event)}
                                                         >
                                                             Join
                                                         </Button>
                                                         <Button
                                                             size="sm"
                                                             variant="outline"
-                                                            className="border-[#bf5925] text-[#bf5925] hover:bg-[#bf5925]/10"
+                                                            className="border-[#bf5925] text-[#bf5925] hover:bg-[#bf5925]/10 bg-transparent"
+                                                            onClick={() => handleEventClick(event)}
                                                         >
                                                             Details
                                                         </Button>
@@ -316,12 +327,14 @@ export default function Community() {
                             </div>
 
                             <div className="text-center mt-12">
-                                <Button className="bg-[#bf5925] hover:bg-[#bf5925]/90 text-white px-8 py-3 rounded-full">
-                                    See all
-                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </Button>
+                                <Link href="/community/events">
+                                    <Button className="bg-[#bf5925] hover:bg-[#bf5925]/90 cursor-pointer text-white px-8 py-3 rounded-full">
+                                        See all
+                                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </Button>
+                                </Link>
                             </div>
                         </>
                     )}
@@ -405,6 +418,9 @@ export default function Community() {
                     </Button>
                 </div>
             </section>
+
+            {/* Event Modal */}
+            <EventModal event={selectedEvent} isOpen={isModalOpen} onClose={closeModal} />
 
             <Footer />
         </div>
