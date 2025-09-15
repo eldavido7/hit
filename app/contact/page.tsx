@@ -244,7 +244,7 @@ export default function Contact() {
                 </div>
             </section>
 
-            <section className="bg-rose-50 py-32 mb-24 px-6 rounded-[50px] relative z-30">
+            <section className="bg-rose-50 md:py-32 mb-24 px-6 mx-5 md:mx-0 rounded-[50px] relative z-30">
                 <div className="max-w-[1440px] mx-auto">
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-12 items-stretch">
                         {/* Left side - Image */}
@@ -261,11 +261,11 @@ export default function Contact() {
                         <div className="flex flex-col justify-center py-6 gap-6">
                             <h2 className="text-4xl font-cormorant text-gray-900 mb-8">Follow Us on Social Media</h2>
 
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
                                 {/* Left column */}
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-[#bf5925] rounded-full flex items-center justify-center">
+                                        <div className="md:w-10 md:h-10 w-4 h-4 md:p-0 p-5 bg-[#bf5925] rounded-full flex items-center justify-center">
                                             <span className="text-white font-bold text-lg">
                                                 <FaFacebookF />
                                             </span>
@@ -274,7 +274,7 @@ export default function Contact() {
                                     </div>
 
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-[#bf5925] rounded-full flex items-center justify-center">
+                                        <div className="md:w-10 md:h-10 w-4 h-4 md:p-0 p-5 bg-[#bf5925] rounded-full flex items-center justify-center">
                                             <span className="text-white font-bold text-lg">
                                                 <FaTiktok />
                                             </span>
@@ -283,7 +283,7 @@ export default function Contact() {
                                     </div>
 
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-[#bf5925] rounded-full flex items-center justify-center">
+                                        <div className="md:w-10 md:h-10 w-4 h-4 md:p-0 p-5 bg-[#bf5925] rounded-full flex items-center justify-center">
                                             <span className="text-white font-bold text-lg">
                                                 <BsTwitterX />
                                             </span>
@@ -292,7 +292,7 @@ export default function Contact() {
                                     </div>
 
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-[#bf5925] rounded-full flex items-center justify-center">
+                                        <div className="md:w-10 md:h-10 w-4 h-4 md:p-0 p-5 bg-[#bf5925] rounded-full flex items-center justify-center">
                                             <span className="text-white font-bold text-lg">
                                                 <FaSpotify />
                                             </span>
@@ -304,7 +304,7 @@ export default function Contact() {
                                 {/* Right column */}
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-[#bf5925] rounded-full flex items-center justify-center">
+                                        <div className="md:w-10 md:h-10 w-4 h-4 md:p-0 p-5 bg-[#bf5925] rounded-full flex items-center justify-center">
                                             <span className="text-white font-bold text-lg">
                                                 <FaInstagram />
                                             </span>
@@ -313,7 +313,7 @@ export default function Contact() {
                                     </div>
 
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-[#bf5925] rounded-full flex items-center justify-center">
+                                        <div className="md:w-10 md:h-10 w-4 h-4 md:p-0 p-5 bg-[#bf5925] rounded-full flex items-center justify-center">
                                             <span className="text-white font-bold text-lg">
                                                 <FaThreads />
                                             </span>
@@ -322,7 +322,7 @@ export default function Contact() {
                                     </div>
 
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 bg-[#bf5925] rounded-full flex items-center justify-center">
+                                        <div className="md:w-10 md:h-10 w-4 h-4 md:p-0 p-5 bg-[#bf5925] rounded-full flex items-center justify-center">
                                             <span className="text-white font-bold text-lg">
                                                 <FaYoutube />
                                             </span>

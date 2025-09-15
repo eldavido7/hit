@@ -310,14 +310,14 @@ export default function Community() {
                                                         >
                                                             Join
                                                         </Button>
-                                                        <Button
+                                                        {/* <Button
                                                             size="sm"
                                                             variant="outline"
                                                             className="border-[#bf5925] text-[#bf5925] hover:bg-[#bf5925]/10 bg-transparent"
                                                             onClick={() => handleEventClick(event)}
                                                         >
                                                             Details
-                                                        </Button>
+                                                        </Button> */}
                                                     </div>
                                                 </div>
                                             </div>

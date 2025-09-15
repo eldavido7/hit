@@ -34,16 +34,15 @@ export function EventModal({ event, isOpen, onClose }: EventModalProps) {
 
             {/* Modal */}
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-                <div className="bg-white rounded-4xl max-w-2xl w-full md:max-h-[90vh] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                    <div className="flex justify-end md:absolute md:right-96 md:items-center">
+                <div className="bg-white rounded-4xl max-w-2xl w-full max-h-[70vh] md:max-h-[90vh] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    <div className="sticky top-3 md:top-10 z-10 md:bg-transparent md:absolute md:right-96 md:items-center flex justify-end md:p-0">
                         <Button
                             onClick={onClose}
-                            className="md:bg-gray-100 md:hover:bg-gray-200 rounded-full md:mt-0 mt-4 transition-colors"
+                            className="bg-gray-100 md:hover:bg-gray-200 rounded-full transition-colors"
                         >
-                            <X className="w-4 h-4 " />
+                            <X className="w-4 h-4" />
                         </Button>
                     </div>
-
                     {/* Content */}
                     <div className="p-6">
                         {/* Event Image */}
