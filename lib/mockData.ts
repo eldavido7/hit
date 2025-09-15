@@ -347,3 +347,42 @@ export const additionalStories = [
         },
     },
 ]
+
+export const events = [
+    {
+        id: 1,
+        title: 'Virtual Workshop: "Telling Your Story With Confidence"',
+        date: "September 10, 2025",
+        day: "Fri",
+        dayNumber: "10",
+        location: "Live on Zoom",
+        description: "A guided session to help immigrant women craft and share their personal narratives.",
+        featured: true,
+        image: "/diverse-women-celebrating-together-at-community-ev.jpg",
+        meetingLink: "https://zoom.us/j/123456789?pwd=abc123",
+    },
+    {
+        id: 2,
+        title: 'Panel Discussion: "Breaking Barriers in New Homelands"',
+        date: "September 15, 2025",
+        day: "Mon",
+        dayNumber: "15",
+        location: "Live on Zoom",
+        description: "A guided session to help immigrant women craft and share their personal narratives.",
+        featured: false,
+        image: "/diverse-women-celebrating-together-at-community-ev.jpg",
+        meetingLink: "https://zoom.us/j/987654321?pwd=xyz789",
+    },
+    {
+        id: 3,
+        title: 'Community Meetup: "Sharing Our Heritage"',
+        date: "September 20, 2025",
+        day: "Sat",
+        dayNumber: "20",
+        location: "Community Center",
+        description: "A guided session to help immigrant women craft and share their personal narratives.",
+        featured: false,
+        image: "/diverse-women-celebrating-together-at-community-ev.jpg",
+        meetingLink: "https://zoom.us/j/456789123?pwd=def456",
+    },
+];
